@@ -4,8 +4,10 @@ module.exports = {
 	entry: "./src/index.js",
 	output: {
 		filename: "[name].js",
-		library: 'hello-world-react-webpack',
-		libraryTarget: "umd",
+		library: {
+			name: "hello-world-react-webpack",
+			type: "module"
+		},
 		libraryExport: 'default'
 	},
 	mode: "production",
@@ -16,6 +18,9 @@ module.exports = {
 				use: [
 					"babel-loader"
 				],
+				options: {
+					presets: ["es2015"]
+				},
 				exclude: '/node-modules/'
 			},
 			{
