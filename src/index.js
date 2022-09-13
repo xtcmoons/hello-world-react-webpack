@@ -1,12 +1,5 @@
-import React from "react";
-import "./index.css";
 
-function HelloWorld() {
-	return (
-		<div className="xtc-container">
-			<p className="text">Hello world</p>
-		</div>
-	)
-}
 
-export default HelloWorld
+export { default as  Button1 } from "./components/Button1";
+
+export { default as  Button2 } from "./components/Button2";
